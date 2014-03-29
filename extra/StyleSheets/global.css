@@ -36,3 +36,9 @@ ul.nav a {
 .LoginForm{
     text-align: center; 
 }
+
+.error { 
+	color: red;
+/*	background-color:#980000; */
+	text-align: center;
+} 

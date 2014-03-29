@@ -11,12 +11,15 @@ require('header.php');
 if(isset($_POST['Login']))
 {
     $error = array(); 
-    $username = isset($_POST['username']) ? trim($_POST['username']) : ''; if (empty($fname)) { $error[] = 'Please fill in your First Name'; }
-    $password = isset($_POST['password']) ? trim($_POST['password']) : ''; if (empty($lname)) { $error[] = 'Please fill in your Last Name'; }
+    $username = isset($_POST['username']) ? trim($_POST['username']) : ''; if (empty($username)) { $error[] = 'Please fill in your User name'; }
+    $password = isset($_POST['password']) ? trim($_POST['password']) : ''; if (empty($password)) { $error[] = 'Please fill in your Password'; }
+}
+foreach($error as $display_error) { echo '<p class="error">' . $display_error . '</p>'; }
+if(empty($error)) 
+{
+    
 }
 ?>
-
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="LoginForm">
     <table align="center"> 
         <tr>
             <td>Username:</td>
