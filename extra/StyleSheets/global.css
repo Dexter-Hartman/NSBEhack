@@ -1,0 +1,38 @@
+/* 
+    Document   : global
+    Created on : Mar 28, 2014, 11:30:37 PM
+    Author     : DRJ101
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body {
+    text-align: center;
+}
+
+ul.nav {
+    list-style-type: none; 
+    padding-left: 0; 
+    margin-left: 0; 
+    padding-top: 6px; 
+    padding-bottom: 5px;
+}
+
+ul.nav li {
+    display: inline;
+}
+
+ul.nav a {
+    padding: 5px 15px 5px 15px; 
+    margin-right: 5px; 
+    background-color: whitesmoke;
+    text-decoration: none; 
+}
+
+.LoginForm{
+    text-align: center; 
+}
