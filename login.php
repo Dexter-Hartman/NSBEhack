@@ -21,6 +21,8 @@ if(empty($error))
 }
 }
 ?>
+<form>
+
     <table align="center"> 
         <tr>
             <td>Username:</td>
