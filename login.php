@@ -17,16 +17,35 @@ if(isset($_POST['Login']))
 foreach($error as $display_error) { echo '<p class="error">' . $display_error . '</p>'; }
 if(empty($error)) 
 {
-    
+ $con=mysqli_connect("localhost","root","","mydb");
+if (mysqli_connect_errno())
+	  {
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	  }
+ // $result = mysqli_query($con,"SELECT userName, password, accountType FROM users WHERE userName='$userName' AND password='$password' ");
+ $query = "SELECT idUsers, userName, password FROM users WHERE userName='$userName' AND " . "password='$password'";
+ $data = mysqli_query($con, $query);
+    if(mysqli_num_rows($data) == 1)
+    {
+        echo ' It works '; 
+        $row = mysqli_fetch_array($data);
+        $user_id = $row['username']; 
+        $password = $row['password']; 
+    }
+    else
+    {
+        echo 'It does not work \n ';
+    }
 }
 }
 ?>
-<form>
+<form acion="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    
 
     <table align="center"> 
         <tr>
             <td>Username:</td>
-            <td><input type="text" name="username" id="username" /></td> 
+            <td><input type="text" name="username" id="username"/></td> 
         </tr>
         <tr>
             <td>Password:</td>
