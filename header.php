@@ -6,4 +6,4 @@
     <body> 
         <h1>Welcome Parents and Students </h1>
         <hr>
-       <?php require('navBar.php'); ?>
+       <?php require('navBar.php'); session_start(); ?>
